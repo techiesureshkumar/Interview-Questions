@@ -108,15 +108,9 @@ CopyOnWriteArrayList introduces extra overload to the processing but it’s very
 
 If we change the implementation to CopyOnWriteArrayList, then we don’t get any exception and below is the output produced.
 
-
-list is:[1, 2, 3, 4, 5]
-1
-list is:[1, 2, 3, 4, 5]
-2
-list is:[1, 2, 3, 4]
-3
-list is:[1, 2, 3, 4, 3 found]
-4
-list is:[1, 4, 3, 4, 3 found]
-5
+1) list is:[1, 2, 3, 4, 5]
+2) list is:[1, 2, 3, 4, 5]
+3) list is:[1, 2, 3, 4]
+4) list is:[1, 2, 3, 4, 3 found]
+5) list is:[1, 4, 3, 4, 3 found]
 Notice that it allows the modification of list, but it doesn’t change the iterator and we get same elements as it was on original list.
