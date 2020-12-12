@@ -18,3 +18,20 @@ Array and Collection are somewhat similar regarding storing the references of ob
 * Arrays are always of fixed size, i.e., a user can not increase or decrease the length of the array according to their requirement or at runtime, but In Collection, size can be changed dynamically as per need.
 * Arrays can only store homogeneous or similar type objects, but in Collection, heterogeneous objects can be stored.
 * Arrays cannot provide the ?ready-made? methods for user requirements as sorting, searching, etc. but Collection includes readymade methods to use.
+
+3) What is the benefit of Generics in Collections Framework?
+
+Java 1.5 came with Generics and all collection interfaces and implementations use it heavily. Generics allow us to provide the type of Object that a collection can contain, so if you try to add any element of other type it throws compile time error.
+This avoids ClassCastException at Runtime because you will get the error at compilation. Also Generics make code clean since we don’t need to use casting and instanceof operator.
+
+4) What are the basic interfaces of Java Collections Framework?
+
+* Collection is the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Java platform doesn’t provide any direct implementations of this interface.
+
+* Set is a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the deck of cards.
+
+* List is an ordered collection and can contain duplicate elements. You can access any element from its index. The list is more like an array with dynamic length.
+
+* A Map is an object that maps keys to values. A map cannot contain duplicate keys: Each key can map to at most one value.
+
+* Some other interfaces are Queue, Dequeue, Iterator, SortedSet, SortedMap and ListIterator.
