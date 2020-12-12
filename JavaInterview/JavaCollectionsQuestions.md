@@ -89,3 +89,34 @@ while(it.hasNext()){
     System.out.println(obj);
 }
 Using iterator is more thread-safe because it makes sure that if underlying list elements are modified, it will throw ConcurrentModificationException.
+    
+13) What do you understand by iterator fail-fast property?
+
+Iterator fail-fast property checks for any modification in the structure of the underlying collection everytime we try to get the next element. If there are any modifications found, it throws ConcurrentModificationException. All the implementations of Iterator in Collection classes are fail-fast by design except the concurrent collection classes like ConcurrentHashMap and CopyOnWriteArrayList.
+
+14) What is difference between fail-fast and fail-safe?
+
+Iterator fail-safe property work with the clone of underlying collection, hence it’s not affected by any modification in the collection. By design, all the collection classes in java.util package are fail-fast whereas collection classes in java.util.concurrent are fail-safe.
+Fail-fast iterators throw ConcurrentModificationException whereas fail-safe iterator never throws ConcurrentModificationException.
+Check this post for CopyOnWriteArrayList Example.
+
+15) CopyOnWriteArrayList in Java?
+
+Sometimes we want to add or remove elements from the list if we find some specific element, in that case we should use concurrent collection class – CopyOnWriteArrayList. This is a thread-safe variant of java.util.ArrayList in which all mutative operations (add, set, and so on) are implemented by making a fresh copy of the underlying array.
+
+CopyOnWriteArrayList introduces extra overload to the processing but it’s very effective when number of modifications are minimal compared to number of traversal operations.
+
+If we change the implementation to CopyOnWriteArrayList, then we don’t get any exception and below is the output produced.
+
+
+list is:[1, 2, 3, 4, 5]
+1
+list is:[1, 2, 3, 4, 5]
+2
+list is:[1, 2, 3, 4]
+3
+list is:[1, 2, 3, 4, 3 found]
+4
+list is:[1, 4, 3, 4, 3 found]
+5
+Notice that it allows the modification of list, but it doesn’t change the iterator and we get same elements as it was on original list.
