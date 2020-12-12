@@ -1,1 +1,20 @@
 
+1) What is Java Collections Framework? List out some benefits of Collections framework?
+
+Collections are used in every programming language and initial java release contained few classes for collections: Vector, Stack, Hashtable, Array. 
+Collections Framework that group all the collections interfaces, implementations and algorithms.
+Java Collections have come through a long way with the usage of Generics and Concurrent Collection classes for thread-safe operations. It also includes blocking interfaces and their implementations in java concurrent package.
+Benefits
+--------
+* Reduced development effort by using core collection classes rather than implementing our own collection classes.
+* Code quality is enhanced with the use of well tested collections framework classes.
+* Reduced effort for code maintenance by using collection classes shipped with JDK.
+* Reusability and Interoperability
+
+2) What are the main differences between array and collection?
+
+Array and Collection are somewhat similar regarding storing the references of objects and manipulating the data, but they differ in many ways. The main differences between the array and Collection are defined below:
+
+* Arrays are always of fixed size, i.e., a user can not increase or decrease the length of the array according to their requirement or at runtime, but In Collection, size can be changed dynamically as per need.
+* Arrays can only store homogeneous or similar type objects, but in Collection, heterogeneous objects can be stored.
+* Arrays cannot provide the ?ready-made? methods for user requirements as sorting, searching, etc. but Collection includes readymade methods to use.
