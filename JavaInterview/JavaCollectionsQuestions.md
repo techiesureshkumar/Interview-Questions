@@ -3,6 +3,7 @@
 Collections are used in every programming language and initial java release contained few classes for collections: Vector, Stack, Hashtable, Array. 
 Collections Framework that group all the collections interfaces, implementations and algorithms.
 Java Collections have come through a long way with the usage of Generics and Concurrent Collection classes for thread-safe operations. It also includes blocking interfaces and their implementations in java concurrent package.
+
 Benefits
 --------
 * Reduced development effort by using core collection classes rather than implementing our own collection classes.
