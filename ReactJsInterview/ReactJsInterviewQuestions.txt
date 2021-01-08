@@ -1,1 +1,292 @@
+1.What is React? what are the Usage?
 
+React is a open source javascript library. 
+It allows to build a user interfaces specifically.
+we can do make single page application. 
+
+usage
+React enable developers to create web application that can change your data without reloading your page.
+It works only on user interfaces in the application.
+React components are reusable.
+React is more faster than other library. 
+
+How React works?
+
+React creates a virtual DOM. When state changes in a component it firstly runs a “diffing” algorithm, which identifies what has changed in the virtual DOM. The second step is reconciliation, where it updates the DOM with the results of diff. 
+
+2.What are the features of React?
+
+It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
+Supports server-side rendering.
+Uses reusable/composable UI components
+Follows Unidirectional data flow or data binding.(It is also known as one-way data flow, which means the data has one, and only one way to be transferred to other parts of the application.)
+High Performance
+JSX makes code easy to read and write.
+
+3.What are the advantages of React?
+
+The main Advantage od react js is scalable, simple and fast.
+Easy to Learn and Use.
+It increases the application’s performance
+It can be conveniently used on the client as well as server side
+
+what are the differences between Reactjs and Angular?
+React 
+React is a open source javascript library.
+React updates its virtual DOM
+React follow unidirectional data flow.
+React is good for developing web aplliication which contains simple mathamatical operations.
+React supports jsx syntax.
+
+Angular
+Angular is a open source javascript framework.
+Angular directly updates the real DOM.
+Angular follow two directional data flow.
+Angular is good for developing industrial application which contains more mathamatical operations.
+Angular supports type script syntax.
+   
+
+4.What are the limitations of React?
+
+React is just a library, not a full-blown framework
+Its library is very large and takes time to understand
+It can be little difficult for the novice programmers to understand
+Coding gets complex as it uses inline templating and JSX
+
+5.What is Jsx?
+
+Jsx stands for javascript XML.
+Jsx is an extention of the javascript language and is to translate regular javascript at runtime.
+We will use Babel tool for coversion.
+We will develop React Applications by using JSX.
+The javascript expression in jsx inside the curly braces {}.
+
+6.Why can’t browsers read JSX?
+
+Browsers cannot read JSX directly because they can only understand JavaScript objects, and JSX is not a regular JavaScript object. 
+Thus, we need to transform the JSX file into a JavaScript object using transpilers like Babel and then pass it to the browser.
+
+7.What is the virtual DOM?
+
+Virtual DOM is a lightweight JavaScript object.
+It is simply a copy of the real DOM
+Virtual Dom updates faster.
+Virtual Dom Can’t directly update HTML
+DOM manipulation is very easy
+No memory wastage
+
+8.Explain the purpose of render() in React.
+
+Each React component must have a render() mandatorily. 
+It returns a single React element which is the representation of the native DOM component.
+Html element inside render() must be enclosed inside as enclosing tag like <div>,<group>,<form> etc.
+should be a pure function.  
+
+9.What is the difference between Element and Component?
+
+Element 
+An element is a plain JavaScript object which describes the component state and DOM node, and its desired properties.
+It only holds information about the component type, its properties, and any child elements inside it.
+It is immutable.
+We cannot apply any methods on elements.
+
+Component
+A component is the core building block of React application. It is a class or function which accepts an input and returns a React element.
+It can contain state and props and has access to the React lifecycle methods.
+It is mutable.
+We can apply any methods on elements.
+
+10.What are the components in React?
+
+There are three components in react they are 
+1.class component 
+2.Functional component
+3.pure component 
+
+11.What are Pure Components?
+
+Pure components are the simplest and fastest components which can be written. They can replace any component which only has a render(). 
+These components enhance the simplicity of the code and performance of the application.
+
+Why state?
+
+React components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
+
+12.What is state in React?
+
+State is predefined object in react js.
+State holds the data and information about the component.
+State is mutable unlike the props and create dynamic and interactive components.
+we can create state only inside the class component.
+The state in a component can change over time, and whenever it changes, the component re-renders.
+Example Class component
+
+13.What are props in React?
+
+Pros stands for Properties in react js.
+React props are like function arguments in javaScript and attributes in HTML.
+To pass the data form parent component to child component we can use props.
+A child component can never send a prop back to the parent component.
+Props are immutable. Example Function Component
+
+14.What is the difference between state and props?
+
+State
+State can be changed.
+State is mutable.
+State holds information about the components.
+State cannot be accessed by child components.
+The State cannot make components reusable.
+
+Props
+Props are read-only.
+Props are immutable.
+Props allow you to pass data from one component to other components as an argument.
+Props can be accessed by the child component.
+Props make components reusable.
+
+15.explain map() function in reactjs
+
+The map() function is used to iterate over an array and manipulate or change data items. In React, the map() function is most commonly used for rendering a list of data to the DOM.
+
+
+15.How do you update the state of a component?
+
+We can update the State of a component using this.setState() function.
+It only adds changes to the original State.
+
+16.How do you pass value from parent component to child components?
+
+Props are used to pass the value from parent component to child component.
+
+17.What are the differences between class and functional components?
+
+Class Component
+Can hold or manage state
+Complex as compared to the stateless component
+Can work with all lifecycle methods
+Can be reused
+
+Functional Component
+Cannot hold or manage state
+Simple and easy to understand
+Does not work with any lifecycle method
+Cannot be reused
+
+18.What are the different phases of component lifecycle?
+
+Mounting Phase - These methods are called in the following order when an instance of a component is being created and inserted into the DOM
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+Updating Phase - An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+Unmounting Phase - This method is called when a component is being removed from the DOM:
+componentWillUnmount()
+
+19.How to write comments in React?
+
+In React, we can write comments in two ways:
+Single Line Comments
+We can write comments as /* Block Comments */ with curly braces: {/* Single Line comment */}  
+
+Multiline Comments
+If we want to comment more that one line, we can do this as  
+{ /*  
+   Multi 
+   line 
+   comment 
+*/ }    
+
+20.What is an event in React?
+
+An event is an action which triggers as a result of the user action or system generated event like a mouse click, loading of a web page, pressing a key, window resizes, etc. 
+In React, the event handling system is very similar to handling events in DOM elements.
+The React event handling system is known as Synthetic Event,some sysntax differents
+React events are named as camelCase instead of lowercase.
+With JSX, a function is passed as the event handler instead of a string.
+
+21.When to use a Class Component over a Function Component?
+
+If the component needs state or lifecycle methods then use class component otherwise use function component.
+
+22.What are synthetic events in React?
+
+SyntheticEvent is a cross-browser wrapper around the browser's native event.
+Synthetic events combine the response of different browser's native events into one API, ensuring that the events are consistent across different browsers.
+
+23.What is an arrow function and how is it used in React?
+
+An arrow function is a short way of writing a function in React.
+It is unnecessary to bind ‘this’ inside the constructor when using an arrow function. 
+This prevents bugs caused by the use of ‘this’ in React callbacks.
+
+24.Differentiate between stateless and stateful components.
+
+Stateless Component
+The stateless components do not hold or manage state.
+It does not contain the knowledge of past, current, and possible future state changes.
+It is also known as a functional component.
+It does not work with any lifecycle method of React.
+
+Stateful Component
+The stateful components can hold or manage state.
+It can contain the knowledge of past, current, and possible future changes in state.
+It is also known as a class component.
+It can work with all lifecycle method of React.
+
+
+25.Explain the Lists in React.
+
+Lists are used to display data in an ordered format. 
+In React, Lists can be created in a similar way as we create it in JavaScript. 
+We can traverse the elements of the list using the map() function.
+
+26.Why is there a need for using keys in Lists?
+
+Keys are very important in lists for the following reasons:
+
+A key is a unique identifier and it is used to identify which items have changed, been updated or deleted from the lists
+It also helps to determine which components need to be re-rendered instead of re-rendering all the components every time. 
+Therefore, it increases performance, as only the updated components are re-rendered
+
+27.What are forms in React?
+
+React employs forms to enable users to interact with web applications.
+
+Using forms, users can interact with the application and enter the required information whenever needed. 
+Form contain certain elements, such as text fields, buttons, checkboxes, radio buttons, etc.
+Forms are used for many different tasks such as user authentication, searching, filtering, indexing, etc.
+
+28.What do you know about controlled and uncontrolled components?
+
+Controlled component
+It does not maintain its internal state.
+Here, data is controlled by the parent component.
+It accepts its current value as a prop.
+It allows validation control.
+
+Uncontrolled component
+It maintains its internal states.
+Here, data is controlled by the DOM itself.
+It uses a ref for their current values.
+It does not allow validation control.
+
+29.Why is it necessary to start component names with a capital letter?
+
+In React, it is necessary to start component names with a capital letter. 
+If we start the component name with lower case, it will throw an error as an unrecognized tag. 
+It is because, in JSX, lower case tag names are considered as HTML tags.
+
+30.How do you create a React app?
+
+npx create-react-app my-app
+cd my-app
+npm start
