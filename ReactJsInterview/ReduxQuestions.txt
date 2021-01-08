@@ -1,1 +1,93 @@
+1.What is Redux?
+
+Redux is an open-source JavaScript library for managing application state.
+It is a predictable state container for JavaScript applications and is used for the entire applications state management.
+It is most commonly used with libraries such as React or Angular for building user interfaces.
+It is lightweight.
+
+2.What are the three principles that Redux follows?
+
+Redux can be described in three basic principles
+Single-Source of Truth  - The state of your whole application is stored in an object tree, called Store.
+State is Read-Only	- The only way to change the state is to dispatch an Action, an object describing what happened.
+Changes are made with Pure Functions - To specify how the state tree is transformed by actions, you write pure Reducers.
+
+3.List down the components of Redux.
+
+Actions -  It’s an object that describes what happened.
+Reducers - It is a place to determine how the state will change.
+Store - State/ Object tree of the entire application is saved in the Store.
+View - Simply displays the data provided by the Store.
+
+4.Explain the role of Reducer.
+
+Reducer are pure fucntions which take the previous state of the app and return a new state based on the action passed to it.
+
+5.What is the significance of Store in Redux?
+
+A store is an object tree that holds the entire application state.
+
+6.How are Actions defined in Redux?
+
+Actions are plain JavaScript objects and they must have a type property to indicate the type of action to be carried out. 
+They must also have a payload that contains the information that should be worked on by the action.
+Actions are sent using store.dispatch() method.
+
+7.What is the Flux?
+
+It is an application design model used as a substitute for the more traditional MVC outline. 
+It is not a framework but a new type of structural design that complements React and the notion of Unidirectional Data Flow.
+
+8.How is Redux different from Flux?
+
+Redux 
+Single Store
+Redux is a container for JavaScript apps.
+Redux is the first choice for web developers because it offers live code editing.
+
+Flux
+Multiple Store
+Flux is a container for application state and logic that are registered to callbacks
+Flux supports actions that are simple JavaScript objects.
+
+9.What are the advantages of Redux?
+
+Single-Source of Truth
+Predictable States
+Easy to Maintain
+Reusable Code
+No need to uplift State
+Easy to Debug
+
+10.How Redux Works - Redux Workflow?
+
+Redux allows you to manage the state of the application using single source of truth, called Store, Any Component can directly access the state from the Store using Subscribe method.
+Let's understand the Redux workflow step by step:
+
+Store - Redux offers a solution of storing all your application's state at one place, called store.
+Dispatch - Actions can be dispatch based on the Event (e.g. OnClick, OnChange, etc).
+Reducers - Reducers are the pure functions which takes the previous state and an action, and return the next state. (Always return new state objects, instead of mutating the previous state).
+Subscribe - Any components can easily subscribe to store.
+In Redux, components don't communicate directly with each other, but rather all state changes must go through the single source of truth, the store.
+
+11.What is Dispatch?
+
+Dispatch is a method which triggers action with type and payload to Reducer.
+
+12.What is Provider?
+
+The Provider is a component that has a reference to the Store and provides the data from the Store to the component it wraps.
+
+13.What is Connect?
+
+Connect is a function communicates with the Provider.
+
+14.How to install Redux?
+
+Redux is available as a package on NPM.
+npm i redux
+OR
+npm install redux
+OR
+npm install redux --save
 
