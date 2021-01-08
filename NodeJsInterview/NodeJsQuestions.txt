@@ -1,1 +1,125 @@
+1.What is Node.js? what are the Usage?
 
+Node.js is an open source server environment
+Node.js is free
+Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+Node.js uses JavaScript on the server
+
+Usage
+Node.js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature.
+Node.js runs on the javascript v8 engine.
+
+2.Why use Node.js?
+Node.js uses asynchronous programming
+Node.js eliminates the waiting, and simply continues with the next request.
+Node.js runs single-threaded, non-blocking, asynchronously programming, which is very memory efficient.
+
+3.How node.js works?
+
+Node.js works on a javascript v8 environment, 
+it is a virtual machine that utilizes JavaScript as its scripting language and achieves high output via non-blocking I/O and single threaded event loop.
+
+4.Why Node.js is single threaded?
+
+Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, 
+more performance and scalability can be achieved as opposed to the typical thread-based implementation.
+
+5.What is ‘Callback’ in node.js?
+
+Callback function is used in node.js to deal with multiple requests made to the server. Like if you have a large file which is going to take a long time for a server to read and if you don’t want a server to get engage in reading that large file while dealing with other requests, 
+call back function is used. Call back function allows the server to deal with pending request first and call a function when it is finished.
+
+6.Explain the difference between frontend and backend development?
+
+Frontend
+Frontend refers to the client-side of an application
+It is the part of a web application that users can see and interact with application (or)  user what you can see in the browser
+HTML, CSS, JavaScript, AngularJS, and ReactJS are some of the essentials of frontend development
+
+Backend
+Backend refers to the server-side of an application
+It constitutes everything that happens behind the scenes
+Java, PHP, Python, and Node.js are some of the backend development technologies
+
+7.How is Node.js most frequently used?
+
+Real-Time Web Applications
+Network Applications
+Distributed Systems
+General Purpose Applications
+Internet of Things
+
+8.How many types of API functions are there in Node.js?
+
+The two types of API functions in Node.js are
+Asynchronous, non-blocking functions
+Synchronous, blocking functions
+
+9.What is package.json?
+
+The package.json file hold the various metadata relavent to the project.
+The package.json file give information to npm it allows to identify the project dependencies. 
+
+10.Which database is more popularly used with Node.js?
+
+MongoDB is the most common database used with Node.js. It is a NoSQL, cross-platform, 
+document-oriented database that provides high performance, high availability, and easy scalability.
+
+11.What are some of the most commonly used libraries in Node.js?
+
+There are two commonly used libraries in Node.js:
+
+ExpressJS - Express is a flexible Node.js web application framework that provides a wide set of features to develop both web and mobile applications.
+Mongoose - Mongoose is also a Node.js web application framework that makes it easy to connect an application to a database.
+
+12.What are the modules in Node.js?
+
+Modules are like JavaScript libraries that can be used in a Node.js application to include a set of functions. To include a module in a Node.js application, 
+use the require() function with the parentheses containing the name of the module.
+
+HTTP - Includes classes, methods, and events to create a Node.js HTTP server
+util - Includes utility functions useful for developers
+fs   - Includes events, classes, and methods to deal with file I/O operations
+url  - Includes methods for URL parsing
+query string - Includes methods to work with query string
+stream - Includes methods to handle streaming data
+zlib - Includes methods to compress or decompress files 
+
+13.What is the advantage of using node.js?
+
+1.Node.js really shines in building fast 
+2.scalable network applications 
+3.offers benefits in performance 
+4.faster development
+
+14.What is Npm?
+
+NPM stands for Node Package Manager, which is responsible for managing all the packages and modules for Node.js.
+Node.js we can npm install command can be used to download all the dependencies of a project mentioned in the package.json.
+
+15.Name some of the attributes of package.json?
+
+Following are the attributes of Package.json
+
+name - name of the package
+version - version of the package
+description - description of the package
+homepage - homepage of the package
+author - author of the package
+contributors - name of the contributors to the package
+dependencies - list of dependencies. npm automatically installs all the dependencies mentioned here in the node_module folder of the package.
+repository - repository type and url of the package
+main - entry point of the package
+keywords - keywords
+
+16. What is v8 engine?
+
+1.V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++.
+2.V8 is a C++ program, which receives JavaScript code, compiles, and executes it.
+3.V8 is a single threaded execution engine.
+4.On the runtime, V8 is mainly managing the heap memory allocation and the single threaded call stack.
+5.The call stack is mainly a list of function to execute, by calling order.
+
+17. What do you know about web development?
+
+Web development refers to building, creating, and an maintaining websites. It includes aspects such as web design, web publishing, web programming, and database management.The field of web development is generally broken down into front-end (the user-facing side) and back-end (the server side). 
