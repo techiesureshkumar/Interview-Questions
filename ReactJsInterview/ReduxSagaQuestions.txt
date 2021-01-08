@@ -1,1 +1,55 @@
+1.What is Redux-saga?
 
+Redux-saga is a redux middleware library, that is designed to make handling side effects in your redux app nice and simple. 
+It achieves this by leveraging an ES6 feature called Generators, allowing us to write asynchronous code that looks synchronous, and is very easy to test.
+
+2.Why we need redux-saga?
+
+Redux-saga is a library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, easy to test, and better at handling failures.
+
+3.How does Redux Saga work? 
+
+Redux-saga is a library that aims to make side effects easier and better by working with sagas. ... In the context of Redux, a saga is implemented as a middleware (we can't use a reducer because this must be a pure function) to coordinate and trigger asynchronous actions (side-effects).
+
+4.What is put in Redux saga?
+
+Creates an Effect description that instructs the middleware to schedule the dispatching of an action to the store. This dispatch may not be immediate since other tasks might lie ahead in the saga task queue or still be in progress.
+
+5.What is fork in Redux saga?
+
+Creates an Effect description that instructs the middleware to perform a non-blocking call on fn
+
+Arguments
+fn: Function - A Generator function, or normal function which returns a Promise as result
+args: Array<any> - An array of values to be passed as arguments to fn
+
+6.What is yield in Redux saga?
+
+In Redux saga, yield is a built in function which allows to use generator functions sequentially. When used in Javascript, the generator functions will allow to yield all values from the nested functions.
+
+7.What is call in Redux saga?
+
+Creates an Effect description that instructs the middleware to call the function fn with args as arguments.
+
+fn: Function - A Generator function, or normal function which either returns a Promise as result, or any other value.
+args: Array<any> - An array of values to be passed as arguments to fn
+
+8.What is select in Redux saga?
+
+Creates an effect that instructs the middleware to invoke the provided selector on the current Store's state (i.e. returns the result of selector(getState(), ...args)).
+
+selector: Function - a function (state, ...args) => args. It takes the current state and optionally some arguments and returns a slice of the current Store's state
+
+args: Array<any> - optional arguments to be passed to the selector in addition of getState
+
+9.Why Redux saga is necessary?
+
+A very common requirement when writing single page applications is making an asynchronous HTTP request to some kind of an API. Redux-observable uses reactive programming, redux-saga uses generators. ... Both are extremely fascinating and useful concepts.
+
+10.What is takeEvery in Redux saga?
+
+takeEvery allows concurrent actions to be handled.
+
+11.What is TakeLatest saga?
+
+takeLatest starts a new saga task in the background. If a saga task was started previously (on the last action dispatched before the actual action), and if this task is still running, the task will be cancelled.
