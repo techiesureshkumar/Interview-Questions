@@ -1,0 +1,5 @@
+1. What is Inner join?
+2. What is Outer join?
+3. How do you avoid duplicate records?
+   * using groupby
+4.
