@@ -1,8 +1,10 @@
 1) What is Java Collections Framework? List out some benefits of Collections framework?
 
-Collections are used in every programming language and initial java release contained few classes for collections: Vector, Stack, Hashtable, Array. 
+Collections are used in every programming language.
+Few classes for collections: Vector, Stack, Hashtable, Array. 
 Collections Framework that group all the collections interfaces, implementations and algorithms.
-Java Collections have come through a long way with the usage of Generics and Concurrent Collection classes for thread-safe operations. It also includes blocking interfaces and their implementations in java concurrent package.
+Java Collections have come through a long way with the usage of Generics and Concurrent Collection classes for thread-safe operations. 
+It also includes blocking interfaces and their implementations in java concurrent package.
 
 Benefits
 --------
