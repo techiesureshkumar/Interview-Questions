@@ -1,1 +1,204 @@
+Sum of several arrays
+1.You will be given an array of several arrays that each contain integers and your goal is to write a function that will sum up all the numbers in all the arrays. For example, if the input is [[3, 2], [1], [4, 12]] then your program should output 22 because 3 + 2 + 1 + 4 + 12 = 22. Solve without and with reduce.
+
+Answer
+We will solve this challenge by looping through the entire array, and then looping through each inner array adding up all the numbers.
+
+function sum_array(arr) {
+  // store our final answer
+  var sum = 0;
+  // loop through entire array
+  for (var i = 0; i < arr.length; i++) {
+    // loop through each inner array
+    for (var j = 0; j < arr[i].length; j++) {
+      // add this number to the current final sum
+      sum += arr[i][j];
+    }
+  }
+  
+  return sum;
+}
+
+Sum of Array plus one
+2.Write a function that takes an array of integers and returns the sum of the integers after adding 1 to each.
+
+Answer
+// ES5 method is nice and clean
+exports.es5 = function (array) {
+  return array.reduce(function (memo, num) {
+    return memo + num;
+  }, array.length);
+};
+
+// Without array.reduce method isn't much different
+exports.iterative = function (array) {
+  var result = array.length;
+
+  for (var i = 0; i < array.length; i++) {
+    result += array[i];
+  }
+
+  return result;
+};
+
+sum_array([[3, 2], [1], [4, 12]]);
+
+
+Given a string, reverse each word in the sentence
+3.For example Welcome to this Javascript Guide! should be become emocleW ot siht tpircsavaJ !ediuG
+
+Answer
+var string = "Welcome to this Javascript Guide!";
+
+// Output becomes !ediuG tpircsavaJ siht ot emocleW
+var reverseEntireSentence = reverseBySeparator(string, "");
+
+// Output becomes emocleW ot siht tpircsavaJ !ediuG
+var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+
+function reverseBySeparator(string, separator) {
+  return string.split(separator).reverse().join(separator);
+}
+
+
+4.Explain arrays in javascript?
+
+An array is an object that holds values (of any type) not particularly in named properties/keys, but rather in numerically indexed positions:
+
+var arr = [
+	"hello world",
+	42,
+	true
+];
+
+arr[0];			// "hello world"
+arr[1];			// 42
+arr[2];			// true
+arr.length;		// 3
+
+typeof arr;		// "object"
+
+Find the Largest Among Three Numbers?
+
+const num1 = parseFloat(prompt("Enter first number: "));
+const num2 = parseFloat(prompt("Enter second number: "));
+const num3 = parseFloat(prompt("Enter third number: "));
+let largest;
+
+// check the condition
+if(num1 >= num2 && num1 >= num3) {
+    largest = num1;
+}
+else if (num2 >= num1 && num2 >= num3) {
+    largest = num2;
+}
+else {
+    largest = num3;
+}
+
+// display the result
+console.log("The largest number is " + largest); (Or)
+
+// take input from the user
+const num1 = parseFloat(prompt("Enter first number: "));
+const num2 = parseFloat(prompt("Enter second number: "));
+const num3 = parseFloat(prompt("Enter third number: "));
+
+const largest = Math.max(num1, num2, num3);
+
+// display the result
+console.log("The largest number is " + largest);
+
+6.Check if a Number is Odd or Even
+
+Example 1: Using if...else
+
+// program to check if the number is even or odd
+// take input from the user
+const number = prompt("Enter a number: ");
+
+//check if the number is even
+if(number % 2 == 0) {
+    console.log("The number is even.");
+}
+
+// if the number is odd
+else {
+    console.log("The number is odd.");
+}
+
+Example 2: Using Ternary Operator
+
+// program to check if the number is even or odd
+// take input from the user
+const number = prompt("Enter a number: ");
+
+// ternary operator
+const result = (number % 2  == 0) ? "even" : "odd";
+
+// display the result
+console.log(`The number is ${result}.`);
+
+7.Check Leap Year?
+
+Example 1: Check Leap Year Using newDate()
+
+// program to check leap year
+function checkLeapYear(year) {
+
+    const leap = new Date(year, 1, 29).getDate() === 29;
+    if (leap) {
+        console.log(year + ' is a leap year');
+    } else {
+        console.log(year + ' is not a leap year');
+    }
+}
+
+// take input
+const year = prompt('Enter a year:');
+
+checkLeapYear(year);
+
+8.Validate An Email Address?
+
+Example: Using Regex
+
+// program to validate an email address
+
+function validateEmail(email_id) {
+    const regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (regex_pattern.test(email_id)) {
+        console.log('The email address is valid');
+    }
+    else {
+        console.log('The email address is not valid');
+    }
+}
+
+validateEmail('abc123@gmail.com');
+validateEmail('hello@com');
+
+9.Convert Date to Number
+
+// program to convert date to number
+// create date
+const d1 = new Date();
+console.log(d1);
+
+// converting to number
+const result = d1.getTime();
+console.log(result);
+
+10.Add Two Numbers
+
+// store input numbers
+const num1 = parseInt(prompt('Enter the first number '));
+const num2 = parseInt(prompt('Enter the second number '));
+
+//add two numbers
+const sum = num1 + num2;
+
+// display the sum
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
 
