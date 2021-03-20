@@ -1,1 +1,33 @@
-What is Java?
+1.  What is Java?
+2.  which of the following will directly stop the execution of a Thread? 
+    Answer : wait()
+3.    class Test 
+      {  
+          private Demo d; 
+          void start() 
+          {  
+              d = new Demo(); 
+              this.takeDemo(d); /* Line 7 */
+          } /* Line 8 */
+          void takeDemo(Demo demo) 
+          { 
+              demo = null;  
+              demo = new Demo(); 
+          } 
+      }
+      When is the Demo object eligible for garbage collection?
+      A.	After line 7
+      B.	After line 8
+      C.	After the start() method completes
+      D.	When the instance running this code is made eligible for garbage collection.
+      Answer: Option D
+
+      Explanation:
+
+      Option D is correct. By a process of elimination.
+
+      Option A is wrong. The variable d is a member of the Test class and is never directly set to null.
+
+      Option B is wrong. A copy of the variable d is set to null and not the actual variable d.
+
+      Option C is wrong. The variable d exists outside the start() method (it is a class member). So, when the start() method finishes the variable d still holds a       reference.
